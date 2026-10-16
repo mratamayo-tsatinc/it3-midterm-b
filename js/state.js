@@ -82,7 +82,7 @@ const DEFAULT_APP_SETTINGS = Object.freeze({
   // local-configurable | state-only. This deployment switch is intentionally
   // read only: persisted browser data can never override it.
   settingsPolicy: 'local-configurable',
-  mode: 'practice',
+  mode: 'exam',
   timerMinutes: 30,
   shell: DEFAULT_SHELL_SETTINGS,
   practice: Object.freeze({
