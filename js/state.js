@@ -14,7 +14,7 @@ const DEFAULT_SHELL_SETTINGS = Object.freeze({
     visible: true,
     transferAnimation: Object.freeze({
       enabled: true,
-      durationMs: 1000,
+      durationMs: 500,
       speedLevelsMs: Object.freeze([1000, 2000, 3000]),
       safetyBufferMs: 180
     }),
@@ -30,7 +30,7 @@ const DEFAULT_SHELL_SETTINGS = Object.freeze({
     stepDurationMs: 1000
   }),
   liveStepScroll: Object.freeze({
-    maxWaitMs: 900,
+    maxWaitMs: 400,
     bottomInsetPx: 28
   }),
   pagination: Object.freeze({
@@ -54,7 +54,7 @@ const state = {
   userEmail: null,
   userStudentId: null,
   language: 'c',
-  mode: 'practice',
+  mode: 'exam',
   profileId: PROFILES[0].id,
   itemIndex: 0,
   itemIndexByProfile: {}, // Remembers which item each profile was last viewing, so switching profiles via the sidebar returns to that exact item instead of resetting to Item 1
@@ -83,7 +83,7 @@ const DEFAULT_APP_SETTINGS = Object.freeze({
   // read only: persisted browser data can never override it.
   settingsPolicy: 'local-configurable',
   mode: 'practice',
-  timerMinutes: 15,
+  timerMinutes: 30,
   shell: DEFAULT_SHELL_SETTINGS,
   practice: Object.freeze({
     interactionMode: 'guided', // guided | strict-sequence
